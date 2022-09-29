@@ -1,0 +1,20 @@
+{
+  "data":[
+      {
+      "id":1,
+      "name":"Pikachu",
+      "description":"Pikachu are small, and cute mouse-like Pokémon. They are almost completely covered by yellow fur. They have long yellow ears that are tipped with black. A Pikachu's back has two brown stripes, and its large tail is notable for being shaped like a lightning bolt, yet its brown tip is almost always forgotten.",
+      "points":80
+    },{
+      "id":2,
+      "name":"Bulbasaur",
+      "description":"In the Pokémon franchise, Bulbasaur are small, squat amphibian and plant Pokémon that move on all four legs, and have blue-green bodies with darker blue-green spots. As a Bulbasaur undergoes evolution into Ivysaur and then later into Venusaur, the bulb on its back blossoms into a large flower.",
+      "points":75
+    },{
+      "id":3,
+      "name":"Squirtle",
+      "description":"Squirtle, known as the Tiny Turtle Pokémon, are turtle Pokémon with large eyes and chubby cheeks, capable of moving either on two feet or on all fours. Their skin is a light blue, and they possess a long, curled tail.",
+      "points":75
+    }
+  ]
+}
