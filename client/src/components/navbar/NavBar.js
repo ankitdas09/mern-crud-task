@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 const NavBar = () => {
@@ -6,7 +7,9 @@ const NavBar = () => {
 		<div className="nav-container">
 			<div className="logo">PokeDex</div>
 			<div className="content">
-				<div className="btn-add">Add Pokemon</div>
+				<Link className="btn-add" to={"/add"}>
+					Add Pokemon
+				</Link>
 			</div>
 		</div>
 	);
