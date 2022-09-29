@@ -1,0 +1,23 @@
+.nav-container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-weight: 300;
+    font-size: 2rem;
+}
+.btn-add{
+    background-color: rgb(248, 59, 59);
+    padding: 10px 8px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-add:hover{
+    transform: scale(0.99);
+}
