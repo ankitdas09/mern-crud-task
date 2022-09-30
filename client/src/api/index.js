@@ -25,6 +25,21 @@ const POST = async (url, data) => {
 	}
 };
 
+const PATCH = async (url, data) => {
+	try {
+		const response = await fetch(url, {
+			method: "PATCH",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		});
+		return true;
+	} catch (error) {
+		return false;
+	}
+};
+
 const DELETE = async (id) => {
 	try {
 		await fetch(`${serverURL}/data/${id}`, {
@@ -51,5 +66,10 @@ export const deletePokemon = async (id) => {
 
 export const getAPokemon = async (id) => {
 	const resp = await GET(`${serverURL}/data/${id}`);
+	return resp;
+};
+
+export const updatePokemon = async (id, data) => {
+	const resp = await PATCH(`${serverURL}/data/${id}`, data);
 	return resp;
 };

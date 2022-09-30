@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import "./styles.css";
-import { getAPokemon, postNewPokemon } from "../../api";
+import { getAPokemon, postNewPokemon, updatePokemon } from "../../api";
 const AddPokemon = ({ _name = "", _desc = "", _points = 15 }) => {
 	const params = useParams();
 	const navigate = useNavigate();
+
 	useEffect(() => {
 		if (params.id) {
 			const handler = async () => {
@@ -22,12 +23,21 @@ const AddPokemon = ({ _name = "", _desc = "", _points = 15 }) => {
 			handler();
 		}
 	}, []);
+
 	const [name, setName] = useState(_name);
 	const [desc, setDesc] = useState(_desc);
 	const [points, setPoints] = useState(_points);
 	const [update, setUpdate] = useState(false);
+
 	const handleSubmit = async () => {
 		if (update) {
+			if (!name || !desc || !points) return;
+			await updatePokemon(params.id, {
+				name: name,
+				description: desc,
+				points: points,
+			});
+			navigate("/");
 		} else {
 			if (!name || !desc || !points) return;
 			await postNewPokemon({

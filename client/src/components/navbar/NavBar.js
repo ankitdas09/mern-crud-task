@@ -4,14 +4,16 @@ import "./styles.css";
 
 const NavBar = () => {
 	return (
-		<div className="nav-container">
-			<div className="logo">PokeDex</div>
-			<div className="content">
-				<Link className="btn-add" to={"/add"}>
-					Add Pokemon
-				</Link>
+		<>
+			<div className="nav-container">
+				<div className="logo">PokeDex</div>
+				<div className="content">
+					<Link className="btn-add" to={"/add"}>
+						Add Pokemon
+					</Link>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

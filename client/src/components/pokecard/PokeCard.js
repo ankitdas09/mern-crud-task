@@ -16,7 +16,9 @@ const PokeCard = ({ pokemon }) => {
 				<div className="points">{pokemon.points}</div>
 			</div>
 			<div className="desc">{pokemon.description}</div>
-			<div className="btn-edit">Edit</div>
+			<Link className="btn-edit" to={`/add/${pokemon.id}`}>
+				Edit
+			</Link>
 			<div className="btn-delete" onClick={handleDelete}>
 				Delete
 			</div>

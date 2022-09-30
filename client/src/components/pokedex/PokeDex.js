@@ -20,12 +20,25 @@ const PokeDex = () => {
 		run();
 	}, []);
 	return (
-		<div className="pokedex">
-			{error && " error"}
-			{pokemons.map((pokemon) => (
-				<PokeCard key={pokemon.id} pokemon={pokemon} />
-			))}
-		</div>
+		<>
+			<div className="pokedex">
+				{error &&
+					"NETWORK ERROR! MAKE SURE SERVER IS RUNNING ON PORT 5000"}
+				{pokemons.map((pokemon) => (
+					<PokeCard key={pokemon.id} pokemon={pokemon} />
+				))}
+			</div>
+			<div
+				className="info"
+				style={{
+					fontSize: "0.8rem",
+					textAlign: "center",
+					marginTop: "20px",
+				}}
+			>
+				MERN CRUD Task
+			</div>
+		</>
 	);
 };
 
